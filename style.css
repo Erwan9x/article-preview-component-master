@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+
+
+*{
+
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+    
+}
+
+
+body{
+
+    background-color: hsl(210, 46%, 95%);
+    min-height: 100vh;
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size:0.9rem;
+}
+
+main{
+
+    width:100%;
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+section{
+
+    width:90%;
+    margin: auto;
+    background-color: white;
+}
+
+.card-container{
+
+    position:relative;
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 0.8em;
+    box-shadow: 1em 0.5em 5em hsla(217, 35%, 67%, 0.5);
+
+}
+
+.image-container{
+
+    width:100%;
+}
+
+.image-container img{
+
+    width:100%;
+    border-top-left-radius: 0.8em;
+    border-top-right-radius: 0.8em;
+}
+
+.text-container{
+
+    padding: 1.5em;
+   
+}
+
+.text-container h3{
+
+    line-height: 1.4em;
+    color:hsl(217, 19%, 35%);
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.text-container p{
+
+    color: hsl(214, 17%, 51%);
+    line-height: 1.5em;
+    font-size:0.9rem;
+}
+
+.profile-container{
+    
+
+    padding: 1.5em;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    width:100%;
+    
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    
+   
+    align-items: center;
+
+}
+
+.profile-photo-container {
+
+    width:15%;
+    max-width: 35px;
+    border-radius: 50%;
+}
+
+.profile-photo-container img{
+
+    width:100%;
+    border-radius: 50%;
+}
+
+.profile-info-container{
+
+    flex-grow: 1;
+    margin-left: 1em;
+
+}
+
+.profile-info-container .name-text{
+
+    color:hsl(217, 19%, 35%);
+    font-weight: 700;
+    font-size: 0.8rem;
+    margin-bottom: 0.3em;
+
+}
+
+.profile-info-container p{
+
+    color:hsl(212, 23%, 69%);
+    font-size: 0.7rem;
+}
+
+.button-share-container{
+
+    
+    padding: 0.75em;
+    background-color: hsl(210, 46%, 95%);
+    border-radius: 50%;
+    
+    
+
+}
+
+.button-share-container{
+
+    cursor: pointer;
+}
+
+
+
+
+/** c'est pour la partie caché et qui sera active quand 
+on cliquera/appuiera sur le bouton share*/
+
+.sharing-container{
+
+    position: absolute;
+    left:0;
+    right: 0;
+    bottom: 0;
+
+    background-color: hsl(217, 19%, 35%);
+    padding: 1.5em;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    
+    border-bottom-left-radius: 0.8em;
+    border-bottom-right-radius:0.8em ;
+
+    display:none;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+
+}
+
+.share-text{
+
+    color:hsl(212, 23%, 69%);
+
+}
+
+.share-text p{
+
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.6em;
+}
+
+.social-media-container{
+
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap:1.5em;
+    margin-left: 1em;
+
+    
+}
+
+.button-share-hidden-container{
+
+    padding: 0.75em;
+    border-radius: 50%;
+    background-color: hsl(214, 17%, 51%);
+    
+
+}
+
+.button-share-hidden-container{
+
+    cursor: pointer;
+}
+
+.button-share-hidden-container img{
+
+    filter: brightness(0) invert(1);
+    border:none;
+}
+
+@media  all and (min-width:768px){
+
+    .card-container{
+
+        width: 60%;
+        margin: auto;
+    }
+
+    .social-media-container{
+
+        gap:2.5em;
+        margin-left: 2em;
+    }
+    
+}
+
+@media  all and (min-width:1024px){
+
+
+    .card-container{
+
+        width: 40%;
+        margin: auto;
+    }
+
+}
+
+@media all and (min-width:1440px){
+
+
+    .card-container{
+        width: 80%;
+        margin: auto;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .image-container{
+
+        width:60%;
+    }
+
+    .image-container img{
+
+        width:100%;
+        
+        height:100%;
+        border-top-left-radius: 0.8em;
+        border-bottom-left-radius: 0.8em;
+        border-top-right-radius: 0em;
+       
+    }
+
+    .overall-text-container{
+
+        width:70%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 2em;
+    }
+
+    .text-container h3{
+
+        font-size: 2.5rem;
+    }
+
+    .text-container p{
+
+        font-size: 1.5rem;
+    }
+
+    .profile-photo-container{
+
+        width:15%;
+        max-width: 60px;
+        border-radius: 50%;
+    } 
+
+    .profile-info-container .name-text{
+
+        font-size: 1.5rem;
+
+    }
+
+    .profile-info-container p {
+
+        font-size: 1rem;
+    }
+
+    .button-share-container{
+
+    
+        padding: 1.1em;
+        background-color: hsl(210, 46%, 95%);
+        border-radius: 50%;
+
+    }
+
+    .sharing-container{
+
+    position: absolute;
+    left:85%;
+    right: -10%;
+    bottom:22%;
+
+    background-color: hsl(217, 19%, 35%);
+    padding: 1.5em;
+    padding-left: 2em;
+    padding-right: 2em;  
+    border-radius: 0.8em;
+    box-shadow: -0.5em 0.25em 2em hsla(217, 26%, 59%, 0.5);
+
+    
+
+    display:none;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    }
+
+    .button-share-hidden-container{
+
+        display: none;
+    }
+
+    .share-text p {
+
+        font-size:1rem ;
+    }
+
+    
+
+
+    
+    .social-media-container{
+
+        
+
+        flex-grow: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap:1.5em;
+        margin-left: 2em;    
+    }
+
+
+
+    .button-share-hidden-container{
+
+    cursor: pointer;
+    }
+
+    .social-media-container::after{
+
+        content:"";
+        width:0; 
+        height:0;
+
+        position: absolute;
+        display: block;
+        left:26%;
+        bottom: -30%;
+
+
+        border-left: solid transparent 2em;
+        border-right: solid transparent 2em;
+        border-top: solid  hsl(217, 19%, 35%) 2em;
+        
+
+       
+
+        
+    }
+
+    
+}
+
+
+
+
+
+
